@@ -1,0 +1,24 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Local .terraform directory (providers, modules cache)
+.terraform/
+
+# Sensitive variable files — copy from .example and fill in
+terraform.tfvars
+*.auto.tfvars
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Terraform plan output
+*.tfplan

@@ -1,0 +1,25 @@
+# Copy this file to terraform.tfvars and fill in the values.
+# terraform.tfvars is git-ignored to prevent accidental secret commits.
+
+# ---- Cloud selection -------------------------------------------------------
+cloud = "azure"
+
+# ---- Common ----------------------------------------------------------------
+project_name = "wireguard"
+environment  = "dev"
+
+admin_username = "azureuser"
+
+# Paste the contents of your public key file (e.g. ~/.ssh/id_rsa.pub)
+ssh_public_key = "ssh-rsa AAAA..."
+
+# Restrict to your own IP address for security — do not leave as 0.0.0.0/0 in production
+allowed_ssh_cidr = "0.0.0.0/0"
+
+# ---- WireGuard -------------------------------------------------------------
+wireguard_port           = 51820
+wireguard_server_address = "10.100.0.1/24"
+
+# ---- Azure -----------------------------------------------------------------
+azure_location = "japaneast"
+azure_vm_size  = "Standard_B1s" # cheapest general-purpose SKU (~$7.59/mo)
